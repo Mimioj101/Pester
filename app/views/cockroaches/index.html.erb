@@ -1,0 +1,13 @@
+<h1>Meet Single Cockroaches In Your Area</h1>
+
+<div class="index-container">
+  <% @cockroaches.each do |roach| %>
+    <div class="index-tile">
+    <table>
+      <h3><%= link_to roach.name, cockroach_path(roach.id)  %></h3>
+
+      <img class="index-img" src="<%= roach.img_url %>" alt="<%= roach.name%>">
+    </table>
+    </div>
+  <% end %>
+</div>

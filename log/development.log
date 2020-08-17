@@ -1,0 +1,416 @@
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200817143819)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "bio" varchar, "img_url" varchar, "preference" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817143819"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCockroaches (20200817143931)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "cockroaches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "species" varchar, "bio" varchar, "dowry" varchar, "img_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817143931"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMatches (20200817144113)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "matches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "cockroach_id" integer, "rating" integer DEFAULT 0, "message" varchar DEFAULT 'f', "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817144113"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-17 14:43:24.593181"], ["updated_at", "2020-08-17 14:43:24.593181"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.9ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Plankton"], ["location", "34th Street"], ["species", "Periplaneta americana"], ["bio", "Looking for a gentle human to feed me crumbs"], ["dowry", "cracker bits"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fketagalanmedia.com%2F2019%2F09%2F11%2Ftaiwans-cockroaches-may-retreat-as-summer-fades-but-theyll-be-back%2F&psig=AOvVaw12h6307TaOt-Jr-1vK_wui&ust=1597762142899000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKi3k_q9ousCFQAAAAAdAAAAABAD"], ["created_at", "2020-08-17 15:06:07.377401"], ["updated_at", "2020-08-17 15:06:07.377401"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.6ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ronnie"], ["location", "Your trashcan"], ["species", "Eurycotis floridana"], ["bio", "I just want a dark, warm place to settle down"], ["dowry", "diamond ring"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.medicaldaily.com%2Fcockroaches-have-evolved-evade-sugar-traps-246197&psig=AOvVaw0d1Z5JYpcofWeuQEAA0oyS&ust=1597762871598000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCpstbAousCFQAAAAAdAAAAABAD"], ["created_at", "2020-08-17 15:06:07.382125"], ["updated_at", "2020-08-17 15:06:07.382125"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.2ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Missy"], ["location", "Your cupboard"], ["species", "Blatta orientalis"], ["bio", "I'm hungry"], ["dowry", "5 million dollars"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.businessinsider.com%2Fhow-to-get-rid-of-cockroachs-2014-3&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAD"], ["created_at", "2020-08-17 15:06:07.386479"], ["updated_at", "2020-08-17 15:06:07.386479"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ethel"], ["location", "Central Park"], ["species", "Blattella germanica"], ["bio", "I like long walks in the alley"], ["dowry", "a rent controlled apartment"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.addisonexterminating.com%2Fcockroaches&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAK"], ["created_at", "2020-08-17 15:06:07.389780"], ["updated_at", "2020-08-17 15:06:07.389780"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tenzin"], ["location", "Williamsburg"], ["species", "Blattella asahinai"], ["bio", "I want to grow old with somebody"], ["dowry", "leftover chinese takeout"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pestczar.com%2Fcockroaches&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAR"], ["created_at", "2020-08-17 15:06:07.393337"], ["updated_at", "2020-08-17 15:06:07.393337"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Harold"], ["location", "Westchester"], ["species", "Pycnoscelus surinamensis"], ["bio", "Trying to move out of my parent's nest"], ["dowry", "your heart"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.planetnatural.com%2Fpest-problem-solver%2Fhousehold-pests%2Fcockroach-control%2F&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAX"], ["created_at", "2020-08-17 15:06:07.397295"], ["updated_at", "2020-08-17 15:06:07.397295"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Norman"], ["location", "Down by the river"], ["species", "Supella longipalpa"], ["bio", "Entrepeneur looking for their partner in crumb"], ["dowry", "a block of cheese"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.qualityassurancemag.com%2Farticle%2F10-true-cockroach-facts%2F&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAd"], ["created_at", "2020-08-17 15:06:07.400652"], ["updated_at", "2020-08-17 15:06:07.400652"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Abe"], ["location", "Trump Tower"], ["species", "Periplaneta australasiae"], ["bio", "Down to mate"], ["dowry", "rock-hard, stale oreos"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcosmosmagazine.com%2Fbiology%2Fleg-it-cockroaches-change-gait-for-extra-speed%2F&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAk"], ["created_at", "2020-08-17 15:06:07.414797"], ["updated_at", "2020-08-17 15:06:07.414797"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bonita"], ["location", "Atlantic City"], ["species", "Periplaneta fuliginosa)"], ["bio", "Aspiring actress with a passion for small crevices"], ["dowry", "a wedding fit for a queen"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.usnews.com%2Fnews%2Fnational-news%2Farticles%2F2019-07-03%2Fcockroaches-becoming-almost-impossible-to-kill-with-pesticides-alone&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAs"], ["created_at", "2020-08-17 15:06:07.418426"], ["updated_at", "2020-08-17 15:06:07.418426"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Santa"], ["location", "North Pole"], ["species", "Periplaneta australasiae"], ["bio", "I just want a human to cuddle with..."], ["dowry", "Rudolph"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F473933560778894764%2F&psig=AOvVaw14v0aT0c5YWG8aaoDBGaet&ust=1597762194406000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjdnJK-ousCFQAAAAAdAAAAABAD"], ["created_at", "2020-08-17 15:06:07.421809"], ["updated_at", "2020-08-17 15:06:07.421809"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Seaward"], ["location", "Financial District, Sewer Line"], ["species", "Blatta orientalis"], ["bio", "I need to travel first class $$$"], ["dowry", "A slice of pepperoni pizza"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbugweedmart.com%2F2016%2F07%2Fhow-to-get-rid-of-sewer-roaches-2%2F&psig=AOvVaw1FVCgQomQuPvI0ZlhuYZNM&ust=1597762634335000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiM8ue_ousCFQAAAAAdAAAAABAD"], ["created_at", "2020-08-17 15:06:07.428066"], ["updated_at", "2020-08-17 15:06:07.428066"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-08-17 11:18:27 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mimiojserkis/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mimiojserkis/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.5ms | Allocations: 480)
+Completed 200 OK in 39ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 3048)
+
+
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:18:35 -0400
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 85)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/mimiojserkis/Flatiron/code/mod2/Pester/Pester/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.1
+Time: 1715ms
+Built at: 08/17/2020 11:18:38 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 3671ms (Views: 3651.6ms | ActiveRecord: 0.0ms | Allocations: 28674)
+
+
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:24:02 -0400
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 3853)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 5072)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Meet Single Cockroaches In Your Area</h1>
+
+<div class="index-container">
+  <% @cockroaches.each do |roach| %>
+    <div class="index-tile">
+      <h3><%= link_to roach.name, cockroach_path(roach.id)  %></h3>
+      
+      <img class="index-img" src="<%= roach.img_url %>">
+
+      
+   <%= #button_to "X", movie_path(movie), method: :delete %>
+    </div>
+  <% end %>
+</div>
+):
+1:    <h1>Meet Single Cockroaches In Your Area</h1>
+2:    
+3:    <div class="index-container">
+4:      <% @cockroaches.each do |roach| %>
+5:        <div class="index-tile">
+6:          <h3><%= link_to roach.name, cockroach_path(roach.id)  %></h3>
+7:          
+8:          <img class="index-img" src="<%= roach.img_url %>">
+9:    
+10:          
+11:       <%= #button_to "X", movie_path(movie), method: :delete %>
+12:        </div>
+13:      <% end %>
+14:    </div>
+  
+app/views/cockroaches/index.html.erb:12: syntax error, unexpected '<'
+app/views/cockroaches/index.html.erb:14: unknown regexp options - dv
+app/views/cockroaches/index.html.erb:16: unterminated string meets end of file
+app/views/cockroaches/index.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+app/views/cockroaches/index.html.erb:12: syntax error, unexpected '<'
+app/views/cockroaches/index.html.erb:14: unknown regexp options - dv
+app/views/cockroaches/index.html.erb:16: unterminated string meets end of file
+app/views/cockroaches/index.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+app/views/cockroaches/index.html.erb:12: syntax error, unexpected '<'
+app/views/cockroaches/index.html.erb:14: unknown regexp options - dv
+app/views/cockroaches/index.html.erb:16: unterminated string meets end of file
+app/views/cockroaches/index.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+app/views/cockroaches/index.html.erb:12: syntax error, unexpected '<'
+app/views/cockroaches/index.html.erb:14: unknown regexp options - dv
+app/views/cockroaches/index.html.erb:16: unterminated string meets end of file
+app/views/cockroaches/index.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+app/views/cockroaches/index.html.erb:12: syntax error, unexpected '<'
+app/views/cockroaches/index.html.erb:14: unknown regexp options - dv
+app/views/cockroaches/index.html.erb:16: unterminated string meets end of file
+app/views/cockroaches/index.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+app/views/cockroaches/index.html.erb:12: syntax error, unexpected '<'
+app/views/cockroaches/index.html.erb:14: unknown regexp options - dv
+app/views/cockroaches/index.html.erb:16: unterminated string meets end of file
+app/views/cockroaches/index.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:24:14 -0400
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (2.7ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:4
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 7730)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 27.4ms | ActiveRecord: 3.6ms | Allocations: 12742)
+
+
+Started GET "/cockroaches/1" for ::1 at 2020-08-17 11:24:38 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:7:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 7110)
+
+
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:25:43 -0400
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:4
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 174029.6ms | Allocations: 393776)
+Completed 500 Internal Server Error in 174053ms (ActiveRecord: 0.2ms | Allocations: 601231)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1
+app/views/cockroaches/index.html.erb:8
+app/views/cockroaches/index.html.erb:4
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:28:38 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (5.8ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:4
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 12612.2ms | Allocations: 13366254)
+Completed 500 Internal Server Error in 13026ms (ActiveRecord: 5.8ms | Allocations: 17166463)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1
+app/views/cockroaches/index.html.erb:8
+app/views/cockroaches/index.html.erb:4
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:29:09 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.9ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:4
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 8074)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 58.2ms | ActiveRecord: 1.5ms | Allocations: 18810)
+
+
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:39:15 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (1.0ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:4
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 8708)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 47.4ms | ActiveRecord: 1.7ms | Allocations: 18942)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200817143819)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "bio" varchar, "img_url" varchar, "preference" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817143819"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCockroaches (20200817143931)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cockroaches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "species" varchar, "bio" varchar, "dowry" varchar, "img_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817143931"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMatches (20200817144113)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "matches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "cockroach_id" integer, "rating" integer DEFAULT 0, "message" varchar DEFAULT 'f', "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817144113"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-17 15:39:35.084697"], ["updated_at", "2020-08-17 15:39:35.084697"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Plankton"], ["location", "34th Street"], ["species", "Periplaneta americana"], ["bio", "Looking for a gentle human to feed me crumbs"], ["dowry", "cracker bits"], ["img_url", "https://i0.wp.com/ketagalanmedia.com/wp-content/uploads/2019/09/Cover-Cockroach-02.jpg?resize=1080%2C675&ssl=1"], ["created_at", "2020-08-17 15:39:42.624278"], ["updated_at", "2020-08-17 15:39:42.624278"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ronnie"], ["location", "Your trashcan"], ["species", "Eurycotis floridana"], ["bio", "I just want a dark, warm place to settle down"], ["dowry", "diamond ring"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.medicaldaily.com%2Fcockroaches-have-evolved-evade-sugar-traps-246197&psig=AOvVaw0d1Z5JYpcofWeuQEAA0oyS&ust=1597762871598000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCpstbAousCFQAAAAAdAAAAABAD"], ["created_at", "2020-08-17 15:39:42.628300"], ["updated_at", "2020-08-17 15:39:42.628300"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.2ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Missy"], ["location", "Your cupboard"], ["species", "Blatta orientalis"], ["bio", "I'm hungry"], ["dowry", "5 million dollars"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.businessinsider.com%2Fhow-to-get-rid-of-cockroachs-2014-3&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAD"], ["created_at", "2020-08-17 15:39:42.631583"], ["updated_at", "2020-08-17 15:39:42.631583"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ethel"], ["location", "Central Park"], ["species", "Blattella germanica"], ["bio", "I like long walks in the alley"], ["dowry", "a rent controlled apartment"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.addisonexterminating.com%2Fcockroaches&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAK"], ["created_at", "2020-08-17 15:39:42.634928"], ["updated_at", "2020-08-17 15:39:42.634928"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tenzin"], ["location", "Williamsburg"], ["species", "Blattella asahinai"], ["bio", "I want to grow old with somebody"], ["dowry", "leftover chinese takeout"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pestczar.com%2Fcockroaches&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAR"], ["created_at", "2020-08-17 15:39:42.638775"], ["updated_at", "2020-08-17 15:39:42.638775"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Harold"], ["location", "Westchester"], ["species", "Pycnoscelus surinamensis"], ["bio", "Trying to move out of my parent's nest"], ["dowry", "your heart"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.planetnatural.com%2Fpest-problem-solver%2Fhousehold-pests%2Fcockroach-control%2F&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAX"], ["created_at", "2020-08-17 15:39:42.642216"], ["updated_at", "2020-08-17 15:39:42.642216"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Norman"], ["location", "Down by the river"], ["species", "Supella longipalpa"], ["bio", "Entrepeneur looking for their partner in crumb"], ["dowry", "a block of cheese"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.qualityassurancemag.com%2Farticle%2F10-true-cockroach-facts%2F&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAd"], ["created_at", "2020-08-17 15:39:42.645701"], ["updated_at", "2020-08-17 15:39:42.645701"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.2ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Abe"], ["location", "Trump Tower"], ["species", "Periplaneta australasiae"], ["bio", "Down to mate"], ["dowry", "rock-hard, stale oreos"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcosmosmagazine.com%2Fbiology%2Fleg-it-cockroaches-change-gait-for-extra-speed%2F&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAk"], ["created_at", "2020-08-17 15:39:42.648750"], ["updated_at", "2020-08-17 15:39:42.648750"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bonita"], ["location", "Atlantic City"], ["species", "Periplaneta fuliginosa)"], ["bio", "Aspiring actress with a passion for small crevices"], ["dowry", "a wedding fit for a queen"], ["img_url", "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.usnews.com%2Fnews%2Fnational-news%2Farticles%2F2019-07-03%2Fcockroaches-becoming-almost-impossible-to-kill-with-pesticides-alone&psig=AOvVaw1UgQhsFVGcqUsRwZXu-S6o&ust=1597762904995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPjg2OXAousCFQAAAAAdAAAAABAs"], ["created_at", "2020-08-17 15:39:42.652026"], ["updated_at", "2020-08-17 15:39:42.652026"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Santa"], ["location", "North Pole"], ["species", "Periplaneta australasiae"], ["bio", "I just want a human to cuddle with..."], ["dowry", "Rudolph"], ["img_url", "https://i0.wp.com/ketagalanmedia.com/wp-content/uploads/2019/09/4d2e6521-0dc8-4c74-9c68-dd83762ea0da.jpg?w=620&ssl=1"], ["created_at", "2020-08-17 15:39:42.656027"], ["updated_at", "2020-08-17 15:39:42.656027"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Seaward"], ["location", "Financial District, Sewer Line"], ["species", "Blatta orientalis"], ["bio", "I need to travel first class $$$"], ["dowry", "A slice of pepperoni pizza"], ["img_url", "https://i1.wp.com/ketagalanmedia.com/wp-content/uploads/2019/09/af77c5c0-13ab-11e8-bcf8-ef0daf68e332.jpeg?resize=1024%2C614&ssl=1"], ["created_at", "2020-08-17 15:39:42.659762"], ["updated_at", "2020-08-17 15:39:42.659762"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:39:50 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.3ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:4
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 8542)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 34.8ms | ActiveRecord: 0.8ms | Allocations: 18880)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200817143819)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "bio" varchar, "img_url" varchar, "preference" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817143819"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCockroaches (20200817143931)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cockroaches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "species" varchar, "bio" varchar, "dowry" varchar, "img_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817143931"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMatches (20200817144113)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "matches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "cockroach_id" integer, "rating" integer DEFAULT 0, "message" varchar DEFAULT 'f', "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817144113"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-17 15:51:55.140218"], ["updated_at", "2020-08-17 15:51:55.140218"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (1.0ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Plankton"], ["location", "34th Street"], ["species", "Periplaneta americana"], ["bio", "Looking for a gentle human to feed me crumbs"], ["dowry", "cracker bits"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2017/04/cockroaches-pest-control.jpg"], ["created_at", "2020-08-17 15:52:08.614770"], ["updated_at", "2020-08-17 15:52:08.614770"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.2ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ronnie"], ["location", "Your trashcan"], ["species", "Eurycotis floridana"], ["bio", "I just want a dark, warm place to settle down"], ["dowry", "diamond ring"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2013/10/Smokey-Brown-Cockroaches.jpg"], ["created_at", "2020-08-17 15:52:08.618798"], ["updated_at", "2020-08-17 15:52:08.618798"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.2ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Missy"], ["location", "Your cupboard"], ["species", "Blatta orientalis"], ["bio", "I'm hungry"], ["dowry", "5 million dollars"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_brownband.jpg"], ["created_at", "2020-08-17 15:52:08.621538"], ["updated_at", "2020-08-17 15:52:08.621538"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ethel"], ["location", "Central Park"], ["species", "Blattella germanica"], ["bio", "I like long walks in the alley"], ["dowry", "a rent controlled apartment"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_orientalcockroach.jpg"], ["created_at", "2020-08-17 15:52:08.626531"], ["updated_at", "2020-08-17 15:52:08.626531"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tenzin"], ["location", "Williamsburg"], ["species", "Blattella asahinai"], ["bio", "I want to grow old with somebody"], ["dowry", "leftover chinese takeout"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_australian.jpg"], ["created_at", "2020-08-17 15:52:08.629965"], ["updated_at", "2020-08-17 15:52:08.629965"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.2ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Harold"], ["location", "Westchester"], ["species", "Pycnoscelus surinamensis"], ["bio", "Trying to move out of my parent's nest"], ["dowry", "your heart"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_americancoackroach.jpg"], ["created_at", "2020-08-17 15:52:08.633417"], ["updated_at", "2020-08-17 15:52:08.633417"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Norman"], ["location", "Down by the river"], ["species", "Supella longipalpa"], ["bio", "Entrepeneur looking for their partner in crumb"], ["dowry", "a block of cheese"], ["img_url", "https://gobioshield.com/wp-content/uploads/sites/2/2019/11/cockroach.jpg"], ["created_at", "2020-08-17 15:52:08.637151"], ["updated_at", "2020-08-17 15:52:08.637151"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Abe"], ["location", "Trump Tower"], ["species", "Periplaneta australasiae"], ["bio", "Down to mate"], ["dowry", "rock-hard, stale oreos"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2019/07/IS-THERE-ANYTHING-GOOD-ABOUT-COCKROACHES.jpg"], ["created_at", "2020-08-17 15:52:08.640566"], ["updated_at", "2020-08-17 15:52:08.640566"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bonita"], ["location", "Atlantic City"], ["species", "Periplaneta fuliginosa)"], ["bio", "Aspiring actress with a passion for small crevices"], ["dowry", "a wedding fit for a queen"], ["img_url", "https://cdn11.bigcommerce.com/s-kjx0e8hnh0/images/stencil/1280x1280/products/201/672/Hissingcockroach__23661.1495561947.jpg?c=2"], ["created_at", "2020-08-17 15:52:08.654953"], ["updated_at", "2020-08-17 15:52:08.654953"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Santa"], ["location", "North Pole"], ["species", "Periplaneta australasiae"], ["bio", "I just want a human to cuddle with..."], ["dowry", "Rudolph"], ["img_url", "https://i0.wp.com/lakenormanpest.com/wp-content/uploads/2019/06/How-do-Pest-Professionals-Kill-Cockroaches.jpg"], ["created_at", "2020-08-17 15:52:08.658357"], ["updated_at", "2020-08-17 15:52:08.658357"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Seaward"], ["location", "Financial District, Sewer Line"], ["species", "Blatta orientalis"], ["bio", "I need to travel first class $$$"], ["dowry", "A slice of pepperoni pizza"], ["img_url", "https://www.alfordhomesolutions.com/core/images/pest-control/cockroach/american/american-cockroach-lg.jpg"], ["created_at", "2020-08-17 15:52:08.662004"], ["updated_at", "2020-08-17 15:52:08.662004"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:52:18 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:4
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 8507)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 47.2ms | ActiveRecord: 3.0ms | Allocations: 18943)
+
+
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:53:30 -0400
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:4
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1322)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 6277)
+
+
+Started GET "/cockroaches" for ::1 at 2020-08-17 11:54:23 -0400
+Processing by CockroachesController#index as HTML
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:4
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 6277)
+
+
