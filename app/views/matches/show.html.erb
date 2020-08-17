@@ -1,0 +1,9 @@
+<h1> Congratz! You've matched with a roach! </h1>
+
+<%= @match.cockroach.name %> <%= @match.user.name %>
+
+
+<img src="<%=@match.cockroach.img_url %>"><img src="<%=@match.user.img_url %>">
+
+
+<%= button_to "Delete", @match, :method => :delete %>

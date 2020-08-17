@@ -1,0 +1,20 @@
+<h1> Hello <%= @user.name %>!!</h1>
+
+<br><br>
+<img src="<%=@user.img_url %>">
+<br><br>
+I am 
+<%= @user.age %>
+years old.
+<br><br>
+<%= @user.bio %>
+<br><br>
+I like cockroaches that are 
+<%= @user.preference%>
+<br>
+
+These are your matches.... <br>
+
+<% @user.matches.each do |f| %>
+<%= link_to f.cockroach.name, match_path(f) %><br>
+<% end %>

@@ -13,19 +13,10 @@ class MatchesController < ApplicationController
         redirect_to match_path(@match)
     end
 
-    def edit
-        @match = Match.find(params[:id])
-    end
-
-    def update
-        @match = Match.update(match_params)
-        redirect_to match_path(@match)
-    end
-
     def destroy
         @match = Match.find(params[:id])
         @match.destroy
-        redirect_to user_path(@match.user)
+        redirect_to user_path(@match.user.id)
     end
 
     private
