@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Cockroach.destroy_all
+User.destroy_all
+
+
 Cockroach.create(name: "Plankton", location: "34th Street", species: "Periplaneta americana", bio: "Looking for a gentle human to feed me crumbs", dowry: "cracker bits", img_url: "https://i0.wp.com/go-forth.com/wp-content/uploads/2017/04/cockroaches-pest-control.jpg")
 Cockroach.create(name: "Ronnie", location: "Your trashcan", species: "Eurycotis floridana", bio: "I just want a dark, warm place to settle down", dowry: "diamond ring", img_url: "https://i0.wp.com/go-forth.com/wp-content/uploads/2013/10/Smokey-Brown-Cockroaches.jpg")
 Cockroach.create(name: "Missy", location: "Your cupboard", species: "Blatta orientalis", bio: "I'm hungry", dowry: "5 million dollars", img_url: "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_brownband.jpg")
@@ -19,4 +23,4 @@ Cockroach.create(name: "Santa", location: "North Pole", species: "Periplaneta au
 Cockroach.create(name: "Seaward", location: "Financial District, Sewer Line", species: "Blatta orientalis", bio:"I need to travel first class $$$", dowry:"A slice of pepperoni pizza" , img_url: "https://www.alfordhomesolutions.com/core/images/pest-control/cockroach/american/american-cockroach-lg.jpg")
 
 
-
+User.create(name: "anonymous", age: 25, bio: "I like roaches", img_url: "afaf", preference: "roaches", password: "password")
