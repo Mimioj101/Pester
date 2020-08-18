@@ -1,5 +1,5 @@
 class MatchesController < ApplicationController
-
+    # skip_before_action :authorized
     def index
         @match = Match.all
     end

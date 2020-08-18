@@ -1,8 +1,9 @@
 class SessionsController < ApplicationController
- 
+skip_before_action :authorized, only: [:new, :create]
+
   def logout
     session.delete(:current_user)
-    redirect_to new_user_path
+    redirect_to new_login_path
   end
 
 def new
