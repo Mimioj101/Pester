@@ -2,7 +2,12 @@
 <h6>Welcome to your Pester profile!</h6>
 <%= button_to "Edit", edit_user_path, method: :get%>
 <br>
-<img src="<%=@user.img_url %>">
+
+
+
+<div >
+
+<img src="<%=@user.img_url %>" width="350">
 <br><br>
 
 <h6>About Me:</h6>
@@ -21,3 +26,5 @@ What I like in a cockroach is
 <% @user.matches.each do |f| %>
 <%= link_to f.cockroach.name, match_path(f) %>- <%= f.cockroach.species%> <br>
 <% end %>
+
+</div>

@@ -7,13 +7,22 @@ class MatchesController < ApplicationController
         @match = Match.find(params[:id])
     end
 
-    def new
-        @match = Match.new
-    end
+    # def new
+    #     @match = Match.new
+    #     @cockroach = Cockroach.find(params[:id])
+    #     byebug
+    # end
 
     def create
-        @match = Match.create(match_params)
-        redirect_to match_path(@match)
+        @cockroach = Cockroach.find(params[:id])
+        @match = Match.create(user_id: @current_user.id, cockroach_id: @cockroach.id)
+
+        if @match.valid?
+            redirect_to match_path(@match)
+        else
+            flash[:errors] = @match.errors.full_messages
+            redirect_to cockroach_path(@cockroach)
+        end
     end
 
     def destroy
@@ -22,9 +31,10 @@ class MatchesController < ApplicationController
         redirect_to user_path(@match.user.id)
     end
 
+
     private
     def match_params
-        params.require(:match).permit(:user_id, :cockroach_id, :rating, :message)
+        params.require(:match).permit(:user_id, :cockroach_id)
     end
 
 end

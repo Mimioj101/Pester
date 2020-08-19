@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Match.destroy_all
 Cockroach.destroy_all
 User.destroy_all
 
@@ -24,3 +25,4 @@ Cockroach.create(name: "Seaward", location: "Financial District, Sewer Line", sp
 
 
 User.create(name: "anonymous", age: 25, bio: "I like roaches", img_url: "afaf", preference: "roaches", password: "password")
+

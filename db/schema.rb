@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_18_132504) do
+ActiveRecord::Schema.define(version: 2020_08_19_184013) do
 
   create_table "cockroaches", force: :cascade do |t|
     t.string "name"
@@ -26,8 +26,6 @@ ActiveRecord::Schema.define(version: 2020_08_18_132504) do
   create_table "matches", force: :cascade do |t|
     t.integer "user_id"
     t.integer "cockroach_id"
-    t.integer "rating", default: 0
-    t.string "message", default: "f"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,8 +1,15 @@
 <h1> Create your profile to find your dream roach! </h1>
 
+<%if flash[:errors] %>
+    <% flash[:errors].each do |err| %>
+        <%= err %><br>
+    <% end %>
+<% end %>
+
+<div style="float:right"><br><img src="https://cdn.trendhunterstatic.com/thumbs/name-a-roach.jpeg" width="800" text-align: center></div>
+
 <%= form_for @user do |f| %>
 
-<br><br>
 
 <%= f.label :name %><br>
 <%= f.text_field :name %>
@@ -10,7 +17,7 @@
 <br><br>
 
 <%= f.label :password %><br>
-<%= f.text_field :password %>
+<%= f.password_field :password %>
 
 <br><br>
 
@@ -19,17 +26,17 @@
 
 <br><br>
 
-<%= f.label :bio, value = "Enter a short description for your profile" %><br>
+<%= f.label :bio, value = "Enter a short bio." %><br>
 <%= f.text_area :bio %>
 
 <br><br>
 
-<%= f.label :preference, value = "What do you look for in a cockroach??" %><br>
+<%= f.label :preference, value = "What do you look for in a cockroach?" %><br>
 <%= f.text_field :preference %>
 
 <br><br>
 
-<%= f.label :img_url, value = "Upload a picture of yourself with good lighting!"%><br>
+<%= f.label :img_url, value = "Enter a URL for your profile picture."%><br>
 <%= f.text_field :img_url %>
 
 <br><br>
@@ -37,3 +44,4 @@
 <%= f.submit %>
 
 <% end %>
+

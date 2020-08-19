@@ -3,7 +3,13 @@
 
 <h2><%= @cockroach.name%></h2>
 
-<img src="<%=@cockroach.img_url %>">
+<% if flash[:errors] %>
+  <% flash[:errors].each do |f| %>
+    <%= f %><br> 
+  <% end %>
+<% end%>
+
+<img src="<%=@cockroach.img_url %>" width="300">
 <br>
 <h4>About me</h4>
 <strong>Location:</strong> <%= @cockroach.location%><br>
@@ -13,4 +19,24 @@
 
 
 
-<%= button_to "Match with me", new_match_path(@match), method: :get%>
+
+
+
+<% id = @current_user.id%>
+
+<%= button_to "Match with me",
+  match_path(
+    matches: {
+      user_id: id,
+      cockroach_id: @cockroach.id,
+    }
+  ),
+  method: :post 
+%>
+
+
+
+
+
+
+
