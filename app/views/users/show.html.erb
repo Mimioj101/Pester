@@ -1,20 +1,23 @@
-<h1> Hello <%= @user.name %>!!</h1>
-
-<br><br>
+<h1> Hello <%= @user.name %>!</h1>
+<h6>Welcome to your Pester profile!</h6>
+<%= button_to "Edit", edit_user_path, method: :get%>
+<br>
 <img src="<%=@user.img_url %>">
 <br><br>
+
+<h6>About Me:</h6>
 I am 
 <%= @user.age %>
 years old.
-<br><br>
 <%= @user.bio %>
-<br><br>
-I like cockroaches that are 
-<%= @user.preference%>
+<br>
+What I like in a cockroach is
+<%= @user.preference%>.
+<br>
 <br>
 
-These are your matches.... <br>
+<h6>These are your matches:</h6>
 
 <% @user.matches.each do |f| %>
-<%= link_to f.cockroach.name, match_path(f) %><br>
+<%= link_to f.cockroach.name, match_path(f) %>- <%= f.cockroach.species%> <br>
 <% end %>
