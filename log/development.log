@@ -20975,3 +20975,1233 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 42ms (Views: 38.2ms | ActiveRecord: 0.2ms | Allocations: 8221)
 
 
+Started GET "/users/new" for ::1 at 2020-08-19 16:31:33 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.2) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.2) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/new" for ::1 at 2020-08-19 16:32:40 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 4195)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 67.6ms | ActiveRecord: 1.4ms | Allocations: 34649)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-08-19 16:32:45 -0400
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.5ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:3
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 7273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 20.2ms | ActiveRecord: 1.2ms | Allocations: 15062)
+
+
+Started DELETE "/sessions/logout" for ::1 at 2020-08-19 16:32:47 -0400
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"H0WjfNlF+1dg/9znK2LR81V0oh/SI9AJuRFe2D4Yz3OdtUQH9S9dDrZ4YTCO04pDYf6GiJPX3xyow/gPcx0bmA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1454)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 16:32:47 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 6821)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 16:32:48 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"J3DwV3aRh2RmL0Zsy4u7Lb3tW22Gvn0Do1JOZBsz/2KlgBcsWvshPbCo+7tuOuCdiWd/+sdKchaygOizVjYriQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 402)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 5964)
+
+
+Started GET "/users/new" for ::1 at 2020-08-19 16:32:49 -0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 14.7ms | Allocations: 1166)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.2ms | Allocations: 6748)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 16:32:50 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"eJsMtL1UgRk6Ta5EczdeHiJoR0OWwpgfiBfKyNMpZtT6a+vPkT4nQOzKE5PWhgWuFuJj1Nc2lwqZxWwfniyyPw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 401)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 5943)
+
+
+Started GET "/users/new" for ::1 at 2020-08-19 16:32:51 -0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 6718)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 16:32:52 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"ruRd2VRx1Onslca6bm/3tpvThf2bSs6fpAtheUhp7AosFLqieBtysDoSe23L3qwGr1mhatq+wYq12ceuBWw44Q=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 401)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 5944)
+
+
+Started GET "/cockroaches" for ::1 at 2020-08-19 16:33:01 -0400
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1593)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 16:33:01 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 401)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 5940)
+
+
+Started POST "/sesions/create" for ::1 at 2020-08-19 16:33:08 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"RSjLfMA6M32KhJij5cmgpZG2GQVEAe7nzDIXSM3V2I7H2CwH7FCVJFwDJXRAePsVpTw9kgX14fLd4LGfgNAMZQ==", "session"=>{"name"=>"anonymous", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "anonymous"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1679)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 16:33:08 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 406)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 5961)
+
+
+Started POST "/sesions/create" for ::1 at 2020-08-19 16:33:14 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"NIIcSudXck4ttkrxCuw8IirsHGNLfAlDZs7pRWf/m4q2cvsxyz3UF/sx9yavXWeSHmY49AqIBlZ3HE+SKvpPYQ==", "session"=>{"name"=>"anonymous", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "anonymous"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1552)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 16:33:14 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 406)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 5950)
+
+
+Started POST "/sesions/create" for ::1 at 2020-08-19 16:33:22 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"8CV4yg6q/5XE4kcxP9KK2qoJtS/0GFXjliFQ68qk1dRy1Z+xIsBZzBJl+uaaY9FqnoORuLXsWvaH8/Y8h6EBPw==", "session"=>{"name"=>"Andy", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Andy"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1544)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 16:33:22 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 406)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 5958)
+
+
+Started GET "/users/new" for ::1 at 2020-08-19 16:33:24 -0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 6722)
+
+
+Started POST "/users" for ::1 at 2020-08-19 16:35:38 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"bauE/9zWsSoMRZo8ohihx0gW46Hs1LMd2LGJaSnbOZrNnerW1umRM/3Hnyfk68mj/908Az1Q6pAKTR1hg29rQA==", "user"=>{"name"=>"Mimi", "password"=>"[FILTERED]", "age"=>"26", "bio"=>"I am just head over heels in love with cockroaches. I just want to be held at night by 6 strong arms. I love the way they scurry across my floor at night.", "preference"=>"a thick thorax", "img_url"=>"https://images.gr-assets.com/users/1480796677p6/62190775.jpg"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mimi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "bio", "img_url", "preference", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mimi"], ["age", 26], ["bio", "I am just head over heels in love with cockroaches. I just want to be held at night by 6 strong arms. I love the way they scurry across my floor at night."], ["img_url", "https://images.gr-assets.com/users/1480796677p6/62190775.jpg"], ["preference", "a thick thorax"], ["created_at", "2020-08-19 20:35:38.882540"], ["updated_at", "2020-08-19 20:35:38.882540"], ["password_digest", "$2a$12$7ANYMO7hB3C60KYFl34PFe6dJNiLTDP3ugvoF5fRdWDbnCm/ycGF."]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "Mimi"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 231ms (ActiveRecord: 2.3ms | Allocations: 6172)
+
+
+Started GET "/users/17" for ::1 at 2020-08-19 16:35:38 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:26
+  Rendered users/show.html.erb within layouts/application (Duration: 20.1ms | Allocations: 6688)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 27.8ms | ActiveRecord: 1.0ms | Allocations: 13288)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-08-19 16:35:45 -0400
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.3ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:3
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1119)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.4ms | Allocations: 7041)
+
+
+Started GET "/users/17" for ::1 at 2020-08-19 16:35:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:26
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 833)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 7283)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-08-19 16:36:05 -0400
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:3
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1114)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 0.4ms | Allocations: 7026)
+
+
+Started GET "/cockroaches/26" for ::1 at 2020-08-19 16:36:58 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 567)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 7276)
+
+
+Started GET "/cockroaches/27" for ::1 at 2020-08-19 16:37:02 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 6674)
+
+
+Started GET "/users/17" for ::1 at 2020-08-19 16:40:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:26
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 7293)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200817143819)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "bio" varchar, "img_url" varchar, "preference" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817143819"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCockroaches (20200817143931)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cockroaches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "species" varchar, "bio" varchar, "dowry" varchar, "img_url" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817143931"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMatches (20200817144113)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "matches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "cockroach_id" integer, "rating" integer DEFAULT 0, "message" varchar DEFAULT 'f', "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200817144113"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPasswordDigestToUsers (20200818132504)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200818132504"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemoveMessageFromMatches (20200819184013)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amatches" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer DEFAULT NULL, "cockroach_id" integer DEFAULT NULL, "rating" integer DEFAULT 0, "message" varchar DEFAULT 'f', "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amatches" ("id","user_id","cockroach_id","rating","message","created_at","updated_at")
+                     SELECT "id","user_id","cockroach_id","rating","message","created_at","updated_at" FROM "matches"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "matches"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "matches" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer DEFAULT NULL, "cockroach_id" integer DEFAULT NULL, "rating" integer DEFAULT 0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "matches" ("id","user_id","cockroach_id","rating","created_at","updated_at")
+                     SELECT "id","user_id","cockroach_id","rating","created_at","updated_at" FROM "amatches"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amatches"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amatches" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer DEFAULT NULL, "cockroach_id" integer DEFAULT NULL, "rating" integer DEFAULT 0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amatches" ("id","user_id","cockroach_id","rating","created_at","updated_at")
+                     SELECT "id","user_id","cockroach_id","rating","created_at","updated_at" FROM "matches"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "matches"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "matches" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer DEFAULT NULL, "cockroach_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "matches" ("id","user_id","cockroach_id","created_at","updated_at")
+                     SELECT "id","user_id","cockroach_id","created_at","updated_at" FROM "amatches"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amatches"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200819184013"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-19 21:19:34.519849"], ["updated_at", "2020-08-19 21:19:34.519849"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Victor S."], ["location", "34th Street"], ["species", "Periplaneta americana"], ["bio", "Looking for a gentle human to feed me crumbs"], ["dowry", "cracker bits"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2017/04/cockroaches-pest-control.jpg"], ["created_at", "2020-08-19 21:19:42.673587"], ["updated_at", "2020-08-19 21:19:42.673587"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teddy"], ["location", "Your trashcan"], ["species", "Eurycotis floridana"], ["bio", "I just want a dark, warm place to settle down"], ["dowry", "diamond ring"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2013/10/Smokey-Brown-Cockroaches.jpg"], ["created_at", "2020-08-19 21:19:42.677180"], ["updated_at", "2020-08-19 21:19:42.677180"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Missy"], ["location", "Your cupboard"], ["species", "Blatta orientalis"], ["bio", "I'm hungry"], ["dowry", "5 million dollars"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_brownband.jpg"], ["created_at", "2020-08-19 21:19:42.680098"], ["updated_at", "2020-08-19 21:19:42.680098"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ethel"], ["location", "Central Park"], ["species", "Blattella germanica"], ["bio", "I like long walks in the alley"], ["dowry", "a rent controlled apartment"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_orientalcockroach.jpg"], ["created_at", "2020-08-19 21:19:42.683011"], ["updated_at", "2020-08-19 21:19:42.683011"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tenzin"], ["location", "Williamsburg"], ["species", "Blattella asahinai"], ["bio", "I want to grow old with somebody"], ["dowry", "leftover chinese takeout"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_australian.jpg"], ["created_at", "2020-08-19 21:19:42.685970"], ["updated_at", "2020-08-19 21:19:42.685970"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Harold"], ["location", "Westchester"], ["species", "Pycnoscelus surinamensis"], ["bio", "Trying to move out of my parent's nest"], ["dowry", "your heart"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_americancoackroach.jpg"], ["created_at", "2020-08-19 21:19:42.689287"], ["updated_at", "2020-08-19 21:19:42.689287"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cody D."], ["location", "Down by the river"], ["species", "Supella longipalpa"], ["bio", "Entrepeneur looking for their partner in crumb"], ["dowry", "a block of cheese"], ["img_url", "https://gobioshield.com/wp-content/uploads/sites/2/2019/11/cockroach.jpg"], ["created_at", "2020-08-19 21:19:42.693019"], ["updated_at", "2020-08-19 21:19:42.693019"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ian G."], ["location", "Trump Tower"], ["species", "Periplaneta australasiae"], ["bio", "Down to mate"], ["dowry", "a few rock hard, stale oreos"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2019/07/IS-THERE-ANYTHING-GOOD-ABOUT-COCKROACHES.jpg"], ["created_at", "2020-08-19 21:19:42.696019"], ["updated_at", "2020-08-19 21:19:42.696019"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bonita"], ["location", "Atlantic City"], ["species", "Periplaneta fuliginosa"], ["bio", "Aspiring actress with a passion for small crevices"], ["dowry", "a wedding fit for a queen"], ["img_url", "https://cdn11.bigcommerce.com/s-kjx0e8hnh0/images/stencil/1280x1280/products/201/672/Hissingcockroach__23661.1495561947.jpg?c=2"], ["created_at", "2020-08-19 21:19:42.698990"], ["updated_at", "2020-08-19 21:19:42.698990"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Santa"], ["location", "North Pole"], ["species", "Periplaneta australasiae"], ["bio", "I just want a human to cuddle with..."], ["dowry", "Rudolph"], ["img_url", "https://i.imgur.com/VvR1dfR.jpg"], ["created_at", "2020-08-19 21:19:42.702175"], ["updated_at", "2020-08-19 21:19:42.702175"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "James W."], ["location", "Financial District, Sewer Line"], ["species", "Blatta orientalis"], ["bio", "I need to travel first class $$$"], ["dowry", "A slice of pepperoni pizza"], ["img_url", "https://www.alfordhomesolutions.com/core/images/pest-control/cockroach/american/american-cockroach-lg.jpg"], ["created_at", "2020-08-19 21:19:42.704977"], ["updated_at", "2020-08-19 21:19:42.704977"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.2ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sophie"], ["location", "The ground"], ["species", "Supella longipalpa"], ["bio", "Bark Bark Bark"], ["dowry", "woof woof"], ["img_url", "https://images.baxterboo.com/global/images/products/large/fuzzy-tarantula-halloween-dog-costume-9447.jpg"], ["created_at", "2020-08-19 21:19:42.708231"], ["updated_at", "2020-08-19 21:19:42.708231"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kevin X."], ["location", "Newark"], ["species", "Pycnoscelus surinamensis"], ["bio", "Liking The Office is not a personality trait."], ["dowry", "a walk-in closet"], ["img_url", "https://cdn.copesan.com/wp-content/uploads/2018/07/american-cockroach-350x266.jpg"], ["created_at", "2020-08-19 21:19:42.711312"], ["updated_at", "2020-08-19 21:19:42.711312"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.2ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Andres"], ["location", "City Hall"], ["species", "Periplaneta australasiae"], ["bio", "Io sono scarafaggio."], ["dowry", "a friend for life"], ["img_url", "https://cdn.branchcms.com/rAe91vQDE0-1235/images/cockroaches-identification.v1.jpg"], ["created_at", "2020-08-19 21:19:42.714418"], ["updated_at", "2020-08-19 21:19:42.714418"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jean Y."], ["location", "New Jersey"], ["species", "Periplaneta fuliginosa"], ["bio", "I'm a little rough around the edges, but at least I don't fly."], ["dowry", "6 oxen & 2 goats"], ["img_url", "https://lh3.googleusercontent.com/proxy/3FKxy70S5vAMHqFlxte49dO8tq97lXIremg70o101-TWIaKqUlwUjem59RvYcQJlRVzvFRx0RF_Nchkrm2rwTTCqyPiofEa9d1qe_StoG-MZ2ld5S2QKfCkx4PTSFg"], ["created_at", "2020-08-19 21:19:42.717514"], ["updated_at", "2020-08-19 21:19:42.717514"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.2ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Iuri S."], ["location", "Crown Heights"], ["species", "Blatta orientalis"], ["bio", "If you can't handle me at my roachiest, you dont deserve me at my best."], ["dowry", "a new nest"], ["img_url", "https://images.newscientist.com/wp-content/gallery/the-unlikely-charm-of-cockroaches/00474fd419f.jpg"], ["created_at", "2020-08-19 21:19:42.720273"], ["updated_at", "2020-08-19 21:19:42.720273"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tormund"], ["location", "A garage in Queens"], ["species", "Blatta orientalis"], ["bio", "Looking for a long term girlfriend"], ["dowry", "a trip to the Bahamas"], ["img_url", "https://i0.wp.com/lakenormanpest.com/wp-content/uploads/2019/06/How-do-Pest-Professionals-Kill-Cockroaches.jpg"], ["created_at", "2020-08-19 21:19:42.723145"], ["updated_at", "2020-08-19 21:19:42.723145"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cody C."], ["location", "Staten Island"], ["species", "Eurycotis floridana"], ["bio", "I'm a very silly roach just looking for their one"], ["dowry", "$100"], ["img_url", "https://preview.redd.it/h2hfaeor2tk01.jpg?width=960&crop=smart&auto=webp&s=d6fee073eb4b3d24c9d9a4dd885a7afb8d06c4b5"], ["created_at", "2020-08-19 21:19:42.726009"], ["updated_at", "2020-08-19 21:19:42.726009"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mary J"], ["location", "The Dump"], ["species", "Periplaneta americana"], ["bio", "I'm tired of roaching around."], ["dowry", "a warm meal"], ["img_url", "https://giecdn.blob.core.windows.net/fileuploads/publications/18/issues/103530/articles/images/istock_000021470436_american_cockroach_fmt.png"], ["created_at", "2020-08-19 21:19:42.729008"], ["updated_at", "2020-08-19 21:19:42.729008"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ryan F."], ["location", "Times Square Olive Garden"], ["species", "Blattella germanica"], ["bio", "I love to fish."], ["dowry", "a Citi Biki membership"], ["img_url", "https://i.insider.com/533450a36da811cd40fec9c7?width=1100&format=jpeg&auto=webp"], ["created_at", "2020-08-19 21:19:42.732093"], ["updated_at", "2020-08-19 21:19:42.732093"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Greg D."], ["location", "The Jersey Shore"], ["species", "Blattella asahinai"], ["bio", "We'll work well together if you like moldy pretzels under the fridge."], ["dowry", "candy from Halloween 2017"], ["img_url", "https://cdn.branchcms.com/9QKOAx7da2-1163/images/blog/cockroach.v2.jpg"], ["created_at", "2020-08-19 21:19:42.744367"], ["updated_at", "2020-08-19 21:19:42.744367"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mimi"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "bio", "img_url", "preference", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mimi"], ["age", 26], ["bio", "I am just head over heels in love with cockroaches. I just want to be held at night by 6 strong arms. I love the way they scurry across my floor at night."], ["img_url", "https://images.gr-assets.com/users/1480796677p6/62190775.jpg"], ["preference", "a thick thorax."], ["created_at", "2020-08-19 21:19:42.973075"], ["updated_at", "2020-08-19 21:19:42.973075"], ["password_digest", "$2a$12$wml9lc5IAbhgpaNehk80HO8cYmvzHbOXig3/xQH5ZJRjTKkNzCr3u"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started DELETE "/sessions/logout" for ::1 at 2020-08-19 17:19:55 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logout as HTML
+  Parameters: {"authenticity_token"=>"Qz00x55Ozg9nbQVn2lwAFHBYWjbmXtKNs1oplArYytXBzdO8siRoVrHquLB/7VukRNJ+oaeq3ZiiiI9DR90ePg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms | Allocations: 4509)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 17:19:55 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3010)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.1ms | Allocations: 13250)
+
+
+Started GET "/users/new" for ::1 at 2020-08-19 17:19:57 -0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1989)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 11.7ms | ActiveRecord: 0.5ms | Allocations: 13900)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 17:19:58 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"5LPIboE2IujREm2yNzxN/lnjtlWvukxeJR/w62b330ZmQy8VrVyEsQeV0GWSjRZObWmSwu5OQ0s0zVY8K/ILrQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 409)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 5823)
+
+
+Started POST "/sesions/create" for ::1 at 2020-08-19 17:20:04 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"uKhvJKEepdmg7N2ar/Enwl+8v944/A5iVN+U2DRd0+U6WIhfjXQDgHZrYE0KQHxyazabSXkIAXdFDTIPeVgHDg==", "session"=>{"name"=>"Mimi", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mimi"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 220ms (ActiveRecord: 0.3ms | Allocations: 1651)
+
+
+Started GET "/users/1" for ::1 at 2020-08-19 17:20:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:26
+  Rendered users/show.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4628)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.7ms | Allocations: 11238)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 20]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Victor S."], ["location", "34th Street"], ["species", "Periplaneta americana"], ["bio", "Looking for a gentle human to feed me crumbs"], ["dowry", "cracker bits"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2017/04/cockroaches-pest-control.jpg"], ["created_at", "2020-08-19 21:20:32.948613"], ["updated_at", "2020-08-19 21:20:32.948613"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teddy"], ["location", "Your trashcan"], ["species", "Eurycotis floridana"], ["bio", "I just want a dark, warm place to settle down"], ["dowry", "diamond ring"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2013/10/Smokey-Brown-Cockroaches.jpg"], ["created_at", "2020-08-19 21:20:32.952890"], ["updated_at", "2020-08-19 21:20:32.952890"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Missy"], ["location", "Your cupboard"], ["species", "Blatta orientalis"], ["bio", "I'm hungry"], ["dowry", "5 million dollars"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_brownband.jpg"], ["created_at", "2020-08-19 21:20:32.956086"], ["updated_at", "2020-08-19 21:20:32.956086"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ethel"], ["location", "Central Park"], ["species", "Blattella germanica"], ["bio", "I like long walks in the alley"], ["dowry", "a rent controlled apartment"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_orientalcockroach.jpg"], ["created_at", "2020-08-19 21:20:32.959753"], ["updated_at", "2020-08-19 21:20:32.959753"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tenzin"], ["location", "Williamsburg"], ["species", "Blattella asahinai"], ["bio", "I want to grow old with somebody"], ["dowry", "leftover chinese takeout"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_australian.jpg"], ["created_at", "2020-08-19 21:20:32.962681"], ["updated_at", "2020-08-19 21:20:32.962681"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Harold"], ["location", "Westchester"], ["species", "Pycnoscelus surinamensis"], ["bio", "Trying to move out of my parent's nest"], ["dowry", "your heart"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_americancoackroach.jpg"], ["created_at", "2020-08-19 21:20:32.966057"], ["updated_at", "2020-08-19 21:20:32.966057"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cody D."], ["location", "Down by the river"], ["species", "Supella longipalpa"], ["bio", "Entrepeneur looking for their partner in crumb"], ["dowry", "a block of cheese"], ["img_url", "https://gobioshield.com/wp-content/uploads/sites/2/2019/11/cockroach.jpg"], ["created_at", "2020-08-19 21:20:32.969169"], ["updated_at", "2020-08-19 21:20:32.969169"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ian G."], ["location", "Trump Tower"], ["species", "Periplaneta australasiae"], ["bio", "Down to mate"], ["dowry", "a few rock hard, stale oreos"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2019/07/IS-THERE-ANYTHING-GOOD-ABOUT-COCKROACHES.jpg"], ["created_at", "2020-08-19 21:20:32.974144"], ["updated_at", "2020-08-19 21:20:32.974144"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bonita"], ["location", "Atlantic City"], ["species", "Periplaneta fuliginosa"], ["bio", "Aspiring actress with a passion for small crevices"], ["dowry", "a wedding fit for a queen"], ["img_url", "https://cdn11.bigcommerce.com/s-kjx0e8hnh0/images/stencil/1280x1280/products/201/672/Hissingcockroach__23661.1495561947.jpg?c=2"], ["created_at", "2020-08-19 21:20:32.990358"], ["updated_at", "2020-08-19 21:20:32.990358"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Santa"], ["location", "North Pole"], ["species", "Periplaneta australasiae"], ["bio", "I just want a human to cuddle with..."], ["dowry", "Rudolph"], ["img_url", "https://i.imgur.com/VvR1dfR.jpg"], ["created_at", "2020-08-19 21:20:32.997310"], ["updated_at", "2020-08-19 21:20:32.997310"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "James W."], ["location", "Financial District, Sewer Line"], ["species", "Blatta orientalis"], ["bio", "I need to travel first class $$$"], ["dowry", "A slice of pepperoni pizza"], ["img_url", "https://www.alfordhomesolutions.com/core/images/pest-control/cockroach/american/american-cockroach-lg.jpg"], ["created_at", "2020-08-19 21:20:33.001849"], ["updated_at", "2020-08-19 21:20:33.001849"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sophie"], ["location", "The ground"], ["species", "Supella longipalpa"], ["bio", "Bark Bark Bark"], ["dowry", "woof woof"], ["img_url", "https://images.baxterboo.com/global/images/products/large/fuzzy-tarantula-halloween-dog-costume-9447.jpg"], ["created_at", "2020-08-19 21:20:33.006093"], ["updated_at", "2020-08-19 21:20:33.006093"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kevin X."], ["location", "Newark"], ["species", "Pycnoscelus surinamensis"], ["bio", "Liking The Office is not a personality trait."], ["dowry", "a walk-in closet"], ["img_url", "https://cdn.copesan.com/wp-content/uploads/2018/07/american-cockroach-350x266.jpg"], ["created_at", "2020-08-19 21:20:33.011258"], ["updated_at", "2020-08-19 21:20:33.011258"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Andres"], ["location", "City Hall"], ["species", "Periplaneta australasiae"], ["bio", "Io sono scarafaggio."], ["dowry", "a friend for life"], ["img_url", "https://cdn.branchcms.com/rAe91vQDE0-1235/images/cockroaches-identification.v1.jpg"], ["created_at", "2020-08-19 21:20:33.015219"], ["updated_at", "2020-08-19 21:20:33.015219"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jean Y."], ["location", "New Jersey"], ["species", "Periplaneta fuliginosa"], ["bio", "I'm a little rough around the edges, but at least I don't fly."], ["dowry", "6 oxen & 2 goats"], ["img_url", "https://lh3.googleusercontent.com/proxy/3FKxy70S5vAMHqFlxte49dO8tq97lXIremg70o101-TWIaKqUlwUjem59RvYcQJlRVzvFRx0RF_Nchkrm2rwTTCqyPiofEa9d1qe_StoG-MZ2ld5S2QKfCkx4PTSFg"], ["created_at", "2020-08-19 21:20:33.018938"], ["updated_at", "2020-08-19 21:20:33.018938"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Iuri S."], ["location", "Crown Heights"], ["species", "Blatta orientalis"], ["bio", "If you can't handle me at my roachiest, you dont deserve me at my best."], ["dowry", "a new nest"], ["img_url", "https://images.newscientist.com/wp-content/gallery/the-unlikely-charm-of-cockroaches/00474fd419f.jpg"], ["created_at", "2020-08-19 21:20:33.022024"], ["updated_at", "2020-08-19 21:20:33.022024"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tormund"], ["location", "A garage in Queens"], ["species", "Blatta orientalis"], ["bio", "Looking for a long term girlfriend"], ["dowry", "a trip to the Bahamas"], ["img_url", "https://i0.wp.com/lakenormanpest.com/wp-content/uploads/2019/06/How-do-Pest-Professionals-Kill-Cockroaches.jpg"], ["created_at", "2020-08-19 21:20:33.026519"], ["updated_at", "2020-08-19 21:20:33.026519"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.6ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cody C."], ["location", "Staten Island"], ["species", "Eurycotis floridana"], ["bio", "I'm a very silly roach just looking for their one"], ["dowry", "$100"], ["img_url", "https://preview.redd.it/h2hfaeor2tk01.jpg?width=960&crop=smart&auto=webp&s=d6fee073eb4b3d24c9d9a4dd885a7afb8d06c4b5"], ["created_at", "2020-08-19 21:20:33.030030"], ["updated_at", "2020-08-19 21:20:33.030030"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mary J"], ["location", "The Dump"], ["species", "Periplaneta americana"], ["bio", "I'm tired of roaching around."], ["dowry", "a warm meal"], ["img_url", "https://giecdn.blob.core.windows.net/fileuploads/publications/18/issues/103530/articles/images/istock_000021470436_american_cockroach_fmt.png"], ["created_at", "2020-08-19 21:20:33.035110"], ["updated_at", "2020-08-19 21:20:33.035110"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ryan F."], ["location", "Times Square Olive Garden"], ["species", "Blattella germanica"], ["bio", "I love to fish."], ["dowry", "a Citi Biki membership"], ["img_url", "https://i.insider.com/533450a36da811cd40fec9c7?width=1100&format=jpeg&auto=webp"], ["created_at", "2020-08-19 21:20:33.038437"], ["updated_at", "2020-08-19 21:20:33.038437"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Greg D."], ["location", "The Jersey Shore"], ["species", "Blattella asahinai"], ["bio", "We'll work well together if you like moldy pretzels under the fridge."], ["dowry", "candy from Halloween 2017"], ["img_url", "https://cdn.branchcms.com/9QKOAx7da2-1163/images/blog/cockroach.v2.jpg"], ["created_at", "2020-08-19 21:20:33.042167"], ["updated_at", "2020-08-19 21:20:33.042167"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mimi"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "bio", "img_url", "preference", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mimi"], ["age", 26], ["bio", "I am just head over heels in love with cockroaches. I just want to be held at night by 6 strong arms. I love the way they scurry across my floor at night."], ["img_url", "https://images.gr-assets.com/users/1480796677p6/62190775.jpg"], ["preference", "a thick thorax"], ["created_at", "2020-08-19 21:20:33.268195"], ["updated_at", "2020-08-19 21:20:33.268195"], ["password_digest", "$2a$12$hCZVu731gf1u/XIUHy.Xn.Z4M7PSqBjXTpx1rmJbAoEiNI0BP1ffa"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/1" for ::1 at 2020-08-19 17:20:40 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms | Allocations: 4639)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 17:20:40 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 16.3ms | ActiveRecord: 0.1ms | Allocations: 12184)
+
+
+Started POST "/sesions/create" for ::1 at 2020-08-19 17:20:47 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"cB1sIk1cam7Y+0GJhQwM3nXkZapUa0gV4TSpYMjv+6Xy7YtZYTbMNw58/F4gvVduQW5BPRWfRwDw5g+3heovTg==", "session"=>{"name"=>"Mimi", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mimi"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 227ms (ActiveRecord: 0.7ms | Allocations: 7560)
+
+
+Started GET "/users/2" for ::1 at 2020-08-19 17:20:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:26
+  Rendered users/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4633)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 0.5ms | Allocations: 11668)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-08-19 17:20:50 -0400
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:3
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 7697)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 0.8ms | Allocations: 15492)
+
+
+Started GET "/cockroaches/33" for ::1 at 2020-08-19 17:21:14 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 561)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 7293)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-08-19 17:21:46 -0400
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:3
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1577)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.4ms | Allocations: 7514)
+
+
+Started GET "/cockroaches/22" for ::1 at 2020-08-19 17:21:49 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 6681)
+
+
+Started GET "/cockroaches/31" for ::1 at 2020-08-19 17:21:58 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 6678)
+
+
+Started GET "/cockroaches/33" for ::1 at 2020-08-19 17:22:04 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 227)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 6672)
+
+
+Started GET "/cockroaches/38" for ::1 at 2020-08-19 17:22:21 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.4ms | Allocations: 6671)
+
+
+Started GET "/cockroaches/26" for ::1 at 2020-08-19 17:22:41 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 6673)
+
+
+Started GET "/cockroaches/42" for ::1 at 2020-08-19 17:22:48 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 229)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 6676)
+
+
+Started GET "/cockroaches/41" for ::1 at 2020-08-19 17:23:00 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 6674)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  [1m[36mCockroach Load (0.3ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 22]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 23]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 24]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 25]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 26]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 27]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 28]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 29]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 30]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 31]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 32]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 33]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 34]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 35]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 36]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 37]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 38]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 39]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 40]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 41]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cockroaches" WHERE "cockroaches"."id" = ?[0m  [["id", 42]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Victor S."], ["location", "34th Street"], ["species", "Periplaneta americana"], ["bio", "Looking for a gentle human to feed me crumbs"], ["dowry", "cracker bits"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2017/04/cockroaches-pest-control.jpg"], ["created_at", "2020-08-19 21:23:21.454015"], ["updated_at", "2020-08-19 21:23:21.454015"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teddy"], ["location", "Your trashcan"], ["species", "Eurycotis floridana"], ["bio", "I just want a dark, warm place to settle down"], ["dowry", "diamond ring"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2013/10/Smokey-Brown-Cockroaches.jpg"], ["created_at", "2020-08-19 21:23:21.457202"], ["updated_at", "2020-08-19 21:23:21.457202"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Missy"], ["location", "Your cupboard"], ["species", "Blatta orientalis"], ["bio", "I'm hungry"], ["dowry", "5 million dollars"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_brownband.jpg"], ["created_at", "2020-08-19 21:23:21.460028"], ["updated_at", "2020-08-19 21:23:21.460028"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ethel"], ["location", "Central Park"], ["species", "Blattella germanica"], ["bio", "I like long walks in the alley"], ["dowry", "a rent controlled apartment"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_orientalcockroach.jpg"], ["created_at", "2020-08-19 21:23:21.463165"], ["updated_at", "2020-08-19 21:23:21.463165"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.2ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tenzin"], ["location", "Williamsburg"], ["species", "Blattella asahinai"], ["bio", "I want to grow old with somebody"], ["dowry", "leftover chinese takeout"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_australian.jpg"], ["created_at", "2020-08-19 21:23:21.466323"], ["updated_at", "2020-08-19 21:23:21.466323"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.5ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Harold"], ["location", "Westchester"], ["species", "Pycnoscelus surinamensis"], ["bio", "Trying to move out of my parent's nest"], ["dowry", "your heart"], ["img_url", "https://www.pests.org/wp-content/uploads/2018/03/diyroaches_americancoackroach.jpg"], ["created_at", "2020-08-19 21:23:21.469553"], ["updated_at", "2020-08-19 21:23:21.469553"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cody D."], ["location", "Down by the river"], ["species", "Supella longipalpa"], ["bio", "Entrepeneur looking for their partner in crumb"], ["dowry", "a block of cheese"], ["img_url", "https://gobioshield.com/wp-content/uploads/sites/2/2019/11/cockroach.jpg"], ["created_at", "2020-08-19 21:23:21.473476"], ["updated_at", "2020-08-19 21:23:21.473476"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ian G."], ["location", "Trump Tower"], ["species", "Periplaneta australasiae"], ["bio", "Down to mate"], ["dowry", "a few rock hard, stale oreos"], ["img_url", "https://i0.wp.com/go-forth.com/wp-content/uploads/2019/07/IS-THERE-ANYTHING-GOOD-ABOUT-COCKROACHES.jpg"], ["created_at", "2020-08-19 21:23:21.476717"], ["updated_at", "2020-08-19 21:23:21.476717"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bonita"], ["location", "Atlantic City"], ["species", "Periplaneta fuliginosa"], ["bio", "Aspiring actress with a passion for small crevices"], ["dowry", "a wedding fit for a queen"], ["img_url", "https://cdn11.bigcommerce.com/s-kjx0e8hnh0/images/stencil/1280x1280/products/201/672/Hissingcockroach__23661.1495561947.jpg?c=2"], ["created_at", "2020-08-19 21:23:21.487259"], ["updated_at", "2020-08-19 21:23:21.487259"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Santa"], ["location", "North Pole"], ["species", "Periplaneta australasiae"], ["bio", "I just want a human to cuddle with..."], ["dowry", "Rudolph"], ["img_url", "https://i.imgur.com/VvR1dfR.jpg"], ["created_at", "2020-08-19 21:23:21.490765"], ["updated_at", "2020-08-19 21:23:21.490765"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "James W."], ["location", "Financial District, Sewer Line"], ["species", "Blatta orientalis"], ["bio", "I need to travel first class $$$"], ["dowry", "A slice of pepperoni pizza"], ["img_url", "https://www.alfordhomesolutions.com/core/images/pest-control/cockroach/american/american-cockroach-lg.jpg"], ["created_at", "2020-08-19 21:23:21.494124"], ["updated_at", "2020-08-19 21:23:21.494124"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sophie"], ["location", "The ground"], ["species", "Supella longipalpa"], ["bio", "Bark Bark Bark"], ["dowry", "woof woof"], ["img_url", "https://images.baxterboo.com/global/images/products/large/fuzzy-tarantula-halloween-dog-costume-9447.jpg"], ["created_at", "2020-08-19 21:23:21.500562"], ["updated_at", "2020-08-19 21:23:21.500562"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kevin X."], ["location", "Newark"], ["species", "Pycnoscelus surinamensis"], ["bio", "Liking The Office is not a personality trait."], ["dowry", "a walk-in closet"], ["img_url", "https://cdn.copesan.com/wp-content/uploads/2018/07/american-cockroach-350x266.jpg"], ["created_at", "2020-08-19 21:23:21.505194"], ["updated_at", "2020-08-19 21:23:21.505194"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Andres"], ["location", "City Hall"], ["species", "Periplaneta australasiae"], ["bio", "Io sono scarafaggio."], ["dowry", "a friend for life"], ["img_url", "https://cdn.branchcms.com/rAe91vQDE0-1235/images/cockroaches-identification.v1.jpg"], ["created_at", "2020-08-19 21:23:21.509643"], ["updated_at", "2020-08-19 21:23:21.509643"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jean Y."], ["location", "New Jersey"], ["species", "Periplaneta fuliginosa"], ["bio", "I'm a little rough around the edges, but at least I don't fly."], ["dowry", "6 oxen & 2 goats"], ["img_url", "https://lh3.googleusercontent.com/proxy/3FKxy70S5vAMHqFlxte49dO8tq97lXIremg70o101-TWIaKqUlwUjem59RvYcQJlRVzvFRx0RF_Nchkrm2rwTTCqyPiofEa9d1qe_StoG-MZ2ld5S2QKfCkx4PTSFg"], ["created_at", "2020-08-19 21:23:21.513954"], ["updated_at", "2020-08-19 21:23:21.513954"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Iuri S."], ["location", "Crown Heights"], ["species", "Blatta orientalis"], ["bio", "If you can't handle me at my roachiest, you dont deserve me at my best."], ["dowry", "a new nest"], ["img_url", "https://images.newscientist.com/wp-content/gallery/the-unlikely-charm-of-cockroaches/00474fd419f.jpg"], ["created_at", "2020-08-19 21:23:21.517907"], ["updated_at", "2020-08-19 21:23:21.517907"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tormund"], ["location", "A garage in Queens"], ["species", "Blatta orientalis"], ["bio", "Looking for a long term girlfriend"], ["dowry", "a trip to the Bahamas"], ["img_url", "https://i0.wp.com/lakenormanpest.com/wp-content/uploads/2019/06/How-do-Pest-Professionals-Kill-Cockroaches.jpg"], ["created_at", "2020-08-19 21:23:21.521586"], ["updated_at", "2020-08-19 21:23:21.521586"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cody C."], ["location", "Staten Island"], ["species", "Eurycotis floridana"], ["bio", "I'm a very silly roach just looking for their one"], ["dowry", "$100"], ["img_url", "https://preview.redd.it/h2hfaeor2tk01.jpg?width=960&crop=smart&auto=webp&s=d6fee073eb4b3d24c9d9a4dd885a7afb8d06c4b5"], ["created_at", "2020-08-19 21:23:21.525221"], ["updated_at", "2020-08-19 21:23:21.525221"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.4ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mary J"], ["location", "The Dump"], ["species", "Periplaneta americana"], ["bio", "I'm tired of roaching around."], ["dowry", "a warm meal"], ["img_url", "https://giecdn.blob.core.windows.net/fileuploads/publications/18/issues/103530/articles/images/istock_000021470436_american_cockroach_fmt.png"], ["created_at", "2020-08-19 21:23:21.528280"], ["updated_at", "2020-08-19 21:23:21.528280"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ryan F."], ["location", "Times Square Olive Garden"], ["species", "Blattella germanica"], ["bio", "I love to fish."], ["dowry", "a Citi Bike membership"], ["img_url", "https://i.insider.com/533450a36da811cd40fec9c7?width=1100&format=jpeg&auto=webp"], ["created_at", "2020-08-19 21:23:21.531718"], ["updated_at", "2020-08-19 21:23:21.531718"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCockroach Create (0.3ms)[0m  [1m[32mINSERT INTO "cockroaches" ("name", "location", "species", "bio", "dowry", "img_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Greg D."], ["location", "The Jersey Shore"], ["species", "Blattella asahinai"], ["bio", "We'll work well together if you like moldy pretzels under the fridge."], ["dowry", "candy from Halloween 2017"], ["img_url", "https://cdn.branchcms.com/9QKOAx7da2-1163/images/blog/cockroach.v2.jpg"], ["created_at", "2020-08-19 21:23:21.534887"], ["updated_at", "2020-08-19 21:23:21.534887"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mimi"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "bio", "img_url", "preference", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mimi"], ["age", 26], ["bio", "I am just head over heels in love with cockroaches. I just want to be held at night by 6 strong arms. I love the way they scurry across my floor at night."], ["img_url", "https://images.gr-assets.com/users/1480796677p6/62190775.jpg"], ["preference", "a thick thorax"], ["created_at", "2020-08-19 21:23:21.759186"], ["updated_at", "2020-08-19 21:23:21.759186"], ["password_digest", "$2a$12$GA4QF0jxtQotuVwa696aWeIvMO2lAmbXw.5Lo2pk0zSIONDoPFo02"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/cockroaches/41" for ::1 at 2020-08-19 17:23:29 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 15ms (ActiveRecord: 0.7ms | Allocations: 4506)
+
+
+Started GET "/sessions/new" for ::1 at 2020-08-19 17:23:29 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 25.6ms | ActiveRecord: 0.1ms | Allocations: 12183)
+
+
+Started POST "/sesions/create" for ::1 at 2020-08-19 17:23:36 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"mTn15Uo/dqp6YnQG35qc4Hd2y3RQVYmoZRtl95rfDgIbyRKeZlXQ86zlydF6K8dQQ/zv4xGhhr10ycMg19ra6Q==", "session"=>{"name"=>"Mimi", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mimi"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 232ms (ActiveRecord: 0.7ms | Allocations: 7569)
+
+
+Started GET "/users/3" for ::1 at 2020-08-19 17:23:36 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:26
+  Rendered users/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4632)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.6ms | Allocations: 11735)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-08-19 17:23:40 -0400
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:3
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 7696)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 0.8ms | Allocations: 15434)
+
+
+Started GET "/cockroaches/47" for ::1 at 2020-08-19 17:23:44 -0400
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:8:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 563)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 7296)
+
+
+Started POST "/matches/47?matches%5Bcockroach_id%5D=47&matches%5Buser_id%5D=3" for ::1 at 2020-08-19 17:23:46 -0400
+Processing by MatchesController#create as HTML
+  Parameters: {"authenticity_token"=>"m8R2Rfqpj+UxnR0CrD2FR4001atysAPFCjl6tiSjaAQYGB0v6eUIe9Y9R4qEnor5yXvOMQt7NMycQv1shEQ6jQ==", "matches"=>{"cockroach_id"=>"47", "user_id"=>"3"}, "id"=>"47"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mMatch Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "matches" WHERE "matches"."cockroach_id" = ? AND "matches"."user_id" = ? LIMIT ?[0m  [["cockroach_id", 47], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mMatch Create (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("user_id", "cockroach_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["cockroach_id", 47], ["created_at", "2020-08-19 21:23:46.464281"], ["updated_at", "2020-08-19 21:23:46.464281"]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mMatch Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "matches" WHERE "matches"."cockroach_id" = ? AND "matches"."id" != ? AND "matches"."user_id" = ? LIMIT ?[0m  [["cockroach_id", 47], ["id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:20:in `create'
+Redirected to http://localhost:3000/matches/1
+Completed 302 Found in 38ms (ActiveRecord: 2.3ms | Allocations: 13431)
+
+
+Started GET "/matches/1" for ::1 at 2020-08-19 17:23:46 -0400
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:7:in `show'
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mCockroach Load (0.3ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:7
+  Rendered matches/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1782)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.8ms | Allocations: 8921)
+
+
+Started GET "/users/3" for ::1 at 2020-08-19 17:25:37 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:27
+  Rendered users/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1626)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.6ms | Allocations: 8078)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-08-19 17:26:51 -0400
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:3
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1579)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 7494)
+
+
