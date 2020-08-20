@@ -21,7 +21,11 @@ What I like in a cockroach is
 <br>
 <br>
 
-<h6>These are your matches:</h6>
+<% if @user.matches.count == 0 %>
+    <h6> You do not have any matches currently. </h6>
+<% else %>
+    <h6>These are your matches:</h6>
+<% end %>
 
 <% @user.matches.each do |f| %>
 <%= link_to f.cockroach.name, match_path(f) %>- <%= f.cockroach.species%> <br>
