@@ -1,4 +1,4 @@
-<h1>Meet Single Cockroaches In Your Area</h1>
+<h2>Meet Single Cockroaches In Your Area</h1>
 
 
 <% array = [] %>
@@ -15,18 +15,3 @@
     <div class="grid-container"><div><img class="index-img" src="<%= cockroach.img_url %>" width="350" ><br><%=link_to cockroach.name, cockroach_path(cockroach.id)%></div></div>
   <%end%>
 <% end %>
-
-
-----------------------------------------------------------------
-
-
-<% leftover = [] %>
-<% leftover = @cockroaches%>
-
-
-
-<% leftover.each do |roach| %>
-  <div class="grid-container">
-  <div><img class="index-img" src="<%= roach.img_url %>" width="350" ><br><%=link_to roach.name, cockroach_path(roach.id)%> </div>
-<% end %>
-</div>

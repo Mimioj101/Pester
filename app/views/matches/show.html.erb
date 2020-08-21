@@ -1,11 +1,13 @@
-<h1> Congrats! You've matched with a roach! </h1>
+<h2> Congrats! You've matched with a roach! </h1>
 
 <br>
-
+<div class="center_match_show_page">
 <img src="<%=@match.cockroach.img_url %>" width="300">
 <img src="https://cdn.pixabay.com/photo/2013/07/13/10/50/heart-157895_1280.png" width="100">
 <img src="<%=@match.user.img_url %>" width="300">
+</div>
 <br><br><br>
+
 <a href="https://twitter.com/intent/tweet?button_hashtag=PestsAreBest&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-size="large" data-text="I just matched with the cockroach of my dreams! Looking to seal it with a hiss! #ThanksPester #LoveAtFirstCrumb" data-url="https://pic.twitter.com/lcTPYgjIpa" data-show-count="false">Tweet #PestsAreBest</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <br><br>
 <%= button_to "Unmatch", @match, :method => :delete %>

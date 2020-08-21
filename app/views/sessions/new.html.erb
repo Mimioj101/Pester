@@ -1,19 +1,20 @@
-  <h1>Login</h1>
 
 <% if flash[:error] %>
   <%= flash[:error] %>
 <% end %>
 
-<%= form_for :session, url: login_path do |f| %>
+
+<div class="sessions_form_outer">
+
+<%= form_for :session, url: login_path, html: {class: "sessions_form"} do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name  %>
+  <%= f.text_field :name  %><br>
 
   <%= f.label :password %>
-  <%= f.password_field :password  %>
+  <%= f.password_field :password  %><br>
 
   <%= f.submit :Login %>
 <% end %>
 <br>
-<div style="text-align: center"><img src="https://cdn.trendhunterstatic.com/thumbs/name-a-roach.jpeg" width="800" text-align: center></div>
 
-
+</div>
