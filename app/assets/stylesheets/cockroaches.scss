@@ -2,18 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+
 .grid-container {
-    display: block;
-    grid-template-columns: 500px;
-    grid-gap: 10px;
-    background-color: #ffd1dc;
-    padding: 10px;
-  }
-  
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+  display: block;
+  grid-template-columns: 500px;
+  grid-gap: 10px;
+  /*background-color: #ffd1dc;*/
+  padding: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.grid-container > div {
+background-color: rgba(120, 120, 120, 0.5);
+text-align: center;
+padding: 20px 0;
+font-size: 30px;
+}

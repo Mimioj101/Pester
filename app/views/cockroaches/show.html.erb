@@ -1,26 +1,27 @@
 
-<h1> Cockroach Profile Page </h1>
+<h2> Cockroach Profile Page </h2>
 
-<h2><%= @cockroach.name%></h2>
+<h3><%= @cockroach.name%></h3>
 
 <% if flash[:errors] %>
   <% flash[:errors].each do |f| %>
     <%= f %><br> 
   <% end %>
 <% end%>
-
+<div class="roach_profile_pic">
 <img src="<%=@cockroach.img_url %>" width="300">
+</div>
 <br>
-<h4>About me</h4>
-<strong>Location:</strong> <%= @cockroach.location%><br>
-<strong>Species:</strong> <i><%= @cockroach.species %></i><br>
-<strong>Bio:</strong> <%= @cockroach.bio %><br>
-<strong>Dowry:</strong> <%= @cockroach.dowry%><br>
+<div class="user_show_page_about">
+  <h4>About me</h4>
+  <strong>Location:</strong> <%= @cockroach.location%><br>
+  <strong>Species:</strong> <i><%= @cockroach.species %></i><br>
+  <strong>Bio:</strong> <%= @cockroach.bio %><br>
+  <strong>Dowry:</strong> <%= @cockroach.dowry%><br>
+</div>
 
 
-
-
-
+<br>
 
 <% id = @current_user.id%>
 

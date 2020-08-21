@@ -1,4 +1,4 @@
-<h1> Create your profile to find your dream roach! </h1>
+
 
 <%if flash[:errors] %>
     <% flash[:errors].each do |err| %>
@@ -6,42 +6,34 @@
     <% end %>
 <% end %>
 
-<div style="float:right"><br><img src="https://cdn.trendhunterstatic.com/thumbs/name-a-roach.jpeg" width="800" text-align: center></div>
+<div class="user_form_outer">
 
-<%= form_for @user do |f| %>
+<%= form_for @user, html: {class: "user_form"} do |f| %>
+
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.label :age %><br>
+    <%= f.number_field(:age, in: 18..100)%>
+    <br>
+    <%= f.label :img_url, value = "Enter a URL for your profile picture."%><br>
+    <%= f.text_field :img_url %>
+    <br>
+    <%= f.label :preference, value = "What do you look for in a cockroach?" %><br>
+    <%= f.text_field :preference %>
+    <br>
+    <%= f.label :bio, value = "Enter a short bio." %><br>
+    <%= f.text_area :bio %>
 
 
-<%= f.label :name %><br>
-<%= f.text_field :name %>
 
-<br><br>
 
-<%= f.label :password %><br>
-<%= f.password_field :password %>
+    <br><br>
 
-<br><br>
+    <%= f.submit %>
 
-<%= f.label :age %><br>
-<%= f.number_field(:age, in: 18..100)%>
-
-<br><br>
-
-<%= f.label :bio, value = "Enter a short bio." %><br>
-<%= f.text_area :bio %>
-
-<br><br>
-
-<%= f.label :preference, value = "What do you look for in a cockroach?" %><br>
-<%= f.text_field :preference %>
-
-<br><br>
-
-<%= f.label :img_url, value = "Enter a URL for your profile picture."%><br>
-<%= f.text_field :img_url %>
-
-<br><br>
-
-<%= f.submit %>
-
-<% end %>
-
+    <% end %>
+</div>

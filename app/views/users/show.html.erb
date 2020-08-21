@@ -1,30 +1,36 @@
-<h1> Hello <%= @user.name %>!</h1>
-<h6>Welcome to your Pester profile!</h6>
-<%= button_to "Edit", edit_user_path, method: :get%>
+<h2> Hello <%= @user.name %>!</h2>
+<h3>Welcome to your Pester profile!</h3>
 <br>
 
 
 
 <div >
 
-<img src="<%=@user.img_url %>" width="350">
+<img class="profile_pic" src="<%=@user.img_url %>" width="350">
 <br><br>
 
+<div class="user_show_page_about">
 <h6>About Me:</h6>
-I am 
-<%= @user.age %>
-years old.
-<%= @user.bio %>
-<br>
-What I like in a cockroach is
-<%= @user.preference%>.
-<br>
-<br>
+Age: <%= @user.age %>
+<p class="user_desc"><%= @user.bio %></p>
 
-<h6>These are your matches:</h6>
+What I like in a cockroach is...<br>
+<p class="user_desc"><%= @user.preference%></p>
+</div>
+
+
+
+<div id="user_show_page_matches">
+<% if @user.matches.count == 0 %>
+    <h6> You do not have any matches currently. </h6>
+<% else %>
+    <h6>These are your matches:</h6>
+<% end %>
 
 <% @user.matches.each do |f| %>
 <%= link_to f.cockroach.name, match_path(f) %>- <%= f.cockroach.species%> <br>
 <% end %>
-
 </div>
+<br>
+
+<%= button_to "Edit", edit_user_path(@user), method: :get, id: "show_page_edit_btn"%>

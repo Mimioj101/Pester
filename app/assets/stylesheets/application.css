@@ -14,7 +14,144 @@
  * require_self
  */
 
+ 
 body {
+
     background-color: #ffd1dc;
+    /*background-image: url(https://cdn.trendhunterstatic.com/thumbs/name-a-roach.jpeg);*/
+    background-image: url(https://images.unsplash.com/photo-1597432845483-c6ae82d95ac6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80);
+
     margin: 10px 10px 10px 10px
 }
+
+.nav-item {
+    color: #ffffff;
+}
+:root {
+    --button-color: #0097F2;
+    --background-color: #FAFAFA;
+    --border-color: #cacaca;
+    --text-color: #262626;
+    --secondary-text-color: #8E8E8E;
+    --link-color: #003869;
+
+    --display-font: 'Oleo Script', cursive;
+    --body-font: 'Lato', sans-serif;
+}
+
+/************    Title Fields    ************/
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    top: 10%;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    top: 10%;
+    font-weight: bold;
+}
+
+/************    Forms    ************/
+
+.sessions_form_outer {
+    padding-top: 15px;
+    width: 300px;
+    height: 130px;
+    background-color: rgba(112, 112, 112, 0.6);
+    position: absolute;
+    float: right;
+    text-align: center;
+    margin: 70px 70px;
+    /*align: center;*/
+}
+.sessions_form {
+    margin: auto;
+    color: white
+}
+
+.user_form_outer {
+    padding-top: 15px;
+    width: 300px;
+    height: 500px;
+    background-color: rgba(112, 112, 112, 0.6);
+    position: absolute;
+    float: right;
+    text-align: center;
+    margin: 30px 70px;
+    align: center;
+}
+.user_form {
+    margin: auto;
+    color: white
+}
+
+/************    User Show Page    ************/
+
+.profile_pic {
+    position: absolute;
+    left: 36%;
+   
+}
+
+.roach_profile_pic {
+    position: absolute;
+    left: 38%;
+}
+
+.user_show_page_about {
+    background-color: rgba(112, 112, 112, 0.6);
+    width: auto;
+    max-width: 300px;
+}
+
+#user_show_page_matches{
+    background-color: rgba(112, 112, 112, 0.6);
+    width: auto;
+    max-width: 300px;
+    top: 35%;
+    left: 80%;
+    position: absolute;
+}
+
+
+.user_desc {
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+#show_page_edit_btn {
+
+}
+
+
+
+.grid-container {
+    display: block;
+    grid-template-columns: 500px;
+    grid-gap: 10px;
+    /*background-color: #ffd1dc;*/
+    padding: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  }
+
+
+  .center_match_show_page {
+    position: absolute;
+    width: 750px;
+    height: 450px;
+    left: 20%;
+  }

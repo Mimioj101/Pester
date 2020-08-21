@@ -1,34 +1,39 @@
-<h1> Fix up your profile to find your dream roach! </h1>
 
-<%= form_for @user do |f| %>
 
-<br><br>
-
-<%= f.label :name %><br>
-<%= f.text_field :name %>
-
-<br><br>
-
-<%= f.label :age %><br>
-<%= f.number_field(:age, in: 18..100)%>
-
-<br><br>
-
-<%= f.label :bio, value = "Enter a short description for your profile" %><br>
-<%= f.text_area :bio %>
-
-<br><br>
-
-<%= f.label :preference, value = "What do you look for in a cockroach??" %><br>
-<%= f.text_field :preference %>
-
-<br><br>
-
-<%= f.label :img_url, value = "Upload a picture of yourself with good lighting!"%><br>
-<%= f.text_field :img_url %>
-
-<br><br>
-
-<%= f.submit %>
-
+<%if flash[:errors] %>
+    <% flash[:errors].each do |err| %>
+        <%= err %><br>
+    <% end %>
 <% end %>
+
+<div class="user_form_outer">
+
+<%= form_for @user, html: {class: "user_form"} do |f| %>
+
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.label :age %><br>
+    <%= f.number_field(:age, in: 18..100)%>
+    <br>
+    <%= f.label :img_url, value = "Enter a URL for your profile picture."%><br>
+    <%= f.text_field :img_url %>
+    <br>
+    <%= f.label :preference, value = "What do you look for in a cockroach?" %><br>
+    <%= f.text_field :preference %>
+    <br>
+    <%= f.label :bio, value = "Enter a short bio." %><br>
+    <%= f.text_area :bio %>
+
+
+
+
+    <br><br>
+
+    <%= f.submit %>
+
+    <% end %>
+</div>
