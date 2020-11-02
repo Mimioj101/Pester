@@ -43619,3 +43619,531 @@ Processing by CockroachesController#index as HTML
 Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.8ms | Allocations: 9725)
 
 
+Started GET "/" for ::1 at 2020-11-02 16:14:55 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mimiojserkis/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mimiojserkis/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.2ms | Allocations: 481)
+Completed 200 OK in 33ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 2742)
+
+
+Started GET "/users" for ::1 at 2020-11-02 16:15:03 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2020-11-02 16:15:11 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 40.7ms | Allocations: 6243)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 74.4ms | ActiveRecord: 1.3ms | Allocations: 25134)
+
+
+Started GET "/sessions/new" for ::1 at 2020-11-02 16:15:14 -0500
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"Dcewo+5+QqsGAMRjKknwRE4aEWhN9iqgETAHmEyRqNEWSvMnh0u0tNgCwxspwLNGMYprPiicZoQ05zuax7nCDA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 6855)
+
+
+Started POST "/sesions/create" for ::1 at 2020-11-02 16:15:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"KvXb84i/JowFtrVREMvjW6z1bW8GVODhp6DWubYHfW4xeJh34YrQk9u0sikTQqBZ02UXOWM+rMWCd+q7PS8Xsw==", "session"=>{"name"=>"Mimi", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mimi"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:13:in `create'
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 219ms (ActiveRecord: 0.3ms | Allocations: 1779)
+
+
+Started GET "/sessions/new" for ::1 at 2020-11-02 16:15:18 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 413)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 5966)
+
+
+Started GET "/users/new" for ::1 at 2020-11-02 16:15:20 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.2ms | Allocations: 6752)
+
+
+Started POST "/users" for ::1 at 2020-11-02 16:16:18 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"xmxLjT54Bh5CkIeA0gRYMc1cq8JSKt2PgZPl6v/PuvBHOLSINx85bS2KcGIdKkQe7lE/JtnclQ/zTDfXbqoBtQ==", "user"=>{"name"=>"Mimi", "password"=>"[FILTERED]", "age"=>"26", "img_url"=>"https://media-exp1.licdn.com/dms/image/C4D03AQH3esz61babnw/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=dCdNrMKfLE_qhDlSr677NqtKjr0Gy_vUxbJ5j6_9G-Y", "preference"=>"A healthy diet and an active lifestyle.", "bio"=>"I am looking for the cockroach of my dreams!"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 226ms (ActiveRecord: 0.2ms | Allocations: 2858)
+
+
+Started GET "/users/new" for ::1 at 2020-11-02 16:16:18 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1162)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.1ms | Allocations: 6739)
+
+
+Started POST "/users" for ::1 at 2020-11-02 16:17:16 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"LwEYwRqrpD70pnBjJNRhRI+6fwWQVdNJQ57D4BTN1GY0jFtFc55SISqkdxsnXSJG8CoFU/U/n21mSf/in+W+uw==", "user"=>{"name"=>"Mimi", "password"=>"[FILTERED]", "age"=>"26", "img_url"=>"https://media-exp1.licdn.com/dms/image/C4D03AQH3esz61babnw/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=dCdNrMKfLE_qhDlSr677NqtKjr0Gy_vUxbJ5j6_9G-Y", "preference"=>"A healthy diet and an active lifestyle.", "bio"=>"I am looking for the cockroach of my dreams. I have always wanted to marry a cockroach ever since I saw A Bug's Life (1998)."}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "age", "bio", "img_url", "preference", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mimi"], ["age", 26], ["bio", "I am looking for the cockroach of my dreams. I have always wanted to marry a cockroach ever since I saw A Bug's Life (1998)."], ["img_url", "https://media-exp1.licdn.com/dms/image/C4D03AQH3esz61babnw/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=dCdNrMKfLE_qhDlSr677NqtKjr0Gy_vUxbJ5j6_9G-Y"], ["preference", "A healthy diet and an active lifestyle."], ["created_at", "2020-11-02 21:17:16.438886"], ["updated_at", "2020-11-02 21:17:16.438886"], ["password_digest", "$2a$12$Kb7NYQhIDU5xacqgnyKdpOuubAHIN37np5eXeHWE40R8yxMuBlIsm"]]
+  ↳ app/controllers/users_controller.rb:12:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12:in `create'
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 226ms (ActiveRecord: 2.8ms | Allocations: 3786)
+
+
+Started GET "/users/17" for ::1 at 2020-11-02 16:17:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:30
+  Rendered users/show.html.erb within layouts/application (Duration: 39.1ms | Allocations: 10665)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 51.1ms | ActiveRecord: 1.3ms | Allocations: 17396)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-11-02 16:17:42 -0500
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (1.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:6
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/cockroaches/index.html.erb:7
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 8678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 25.4ms | ActiveRecord: 2.3ms | Allocations: 16493)
+
+
+Started GET "/users/17" for ::1 at 2020-11-02 16:18:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:30
+  Rendered users/show.html.erb within layouts/application (Duration: 24.3ms | Allocations: 1530)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 0.6ms | Allocations: 7984)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-11-02 16:19:16 -0500
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.4ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:6
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/cockroaches/index.html.erb:7
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 25.9ms | ActiveRecord: 1.2ms | Allocations: 8273)
+
+
+Started GET "/cockroaches/43" for ::1 at 2020-11-02 16:19:28 -0500
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.3ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:9:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 565)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.1ms | ActiveRecord: 0.5ms | Allocations: 7300)
+
+
+Started POST "/matches/43?matches%5Bcockroach_id%5D=43&matches%5Buser_id%5D=17" for ::1 at 2020-11-02 16:19:32 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"authenticity_token"=>"0/yfOYv7XI6SY1y1rMxQp8Ci6NFzftG9RM9gNHjuxrQbSXS8dPBslWNV+FoRMubte8S+GaiQ0FsDU04aS44Yxg==", "matches"=>{"cockroach_id"=>"43", "user_id"=>"17"}, "id"=>"43"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mMatch Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "matches" WHERE "matches"."cockroach_id" = ? AND "matches"."user_id" = ? LIMIT ?[0m  [["cockroach_id", 43], ["user_id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mMatch Create (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("user_id", "cockroach_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 17], ["cockroach_id", 43], ["created_at", "2020-11-02 21:19:33.044566"], ["updated_at", "2020-11-02 21:19:33.044566"]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mMatch Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "matches" WHERE "matches"."cockroach_id" = ? AND "matches"."id" != ? AND "matches"."user_id" = ? LIMIT ?[0m  [["cockroach_id", 43], ["id", 32], ["user_id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:20:in `create'
+Redirected to http://localhost:3000/matches/32
+Completed 302 Found in 86ms (ActiveRecord: 4.6ms | Allocations: 13711)
+
+
+Started GET "/matches/32" for ::1 at 2020-11-02 16:19:33 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:7:in `show'
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:7
+  Rendered matches/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 14.4ms | ActiveRecord: 1.1ms | Allocations: 8929)
+
+
+Started GET "/users/17" for ::1 at 2020-11-02 16:19:37 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:31
+  Rendered users/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2320)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 15.0ms | ActiveRecord: 1.2ms | Allocations: 8775)
+
+
+Started GET "/matches/32" for ::1 at 2020-11-02 16:19:39 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:7:in `show'
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mCockroach Load (0.7ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:7
+  Rendered matches/show.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1571)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 23.9ms | ActiveRecord: 1.3ms | Allocations: 8018)
+
+
+Started GET "/users/17" for ::1 at 2020-11-02 16:19:42 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:31
+  Rendered users/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.0ms | ActiveRecord: 1.1ms | Allocations: 8759)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-11-02 16:19:43 -0500
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:6
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/cockroaches/index.html.erb:7
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/cockroaches/index.html.erb:9
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3079)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.5ms | Allocations: 9007)
+
+
+Started GET "/cockroaches/46" for ::1 at 2020-11-02 16:19:46 -0500
+Processing by CockroachesController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/cockroaches_controller.rb:9:in `show'
+  Rendering cockroaches/show.html.erb within layouts/application
+  Rendered cockroaches/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.5ms | Allocations: 6694)
+
+
+Started POST "/matches/46?matches%5Bcockroach_id%5D=46&matches%5Buser_id%5D=17" for ::1 at 2020-11-02 16:19:49 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"authenticity_token"=>"5dGYD4uXkMHeXadUd4RVZwa7ySCPnqHDoY1dUiZsrwbVLlsggkMDBB3lji0anfnsxadfo1fU4Q7HZVcQ7N9xKQ==", "matches"=>{"cockroach_id"=>"46", "user_id"=>"17"}, "id"=>"46"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mCockroach Load (0.3ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mMatch Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "matches" WHERE "matches"."cockroach_id" = ? AND "matches"."user_id" = ? LIMIT ?[0m  [["cockroach_id", 46], ["user_id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mMatch Create (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("user_id", "cockroach_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 17], ["cockroach_id", 46], ["created_at", "2020-11-02 21:19:49.948201"], ["updated_at", "2020-11-02 21:19:49.948201"]]
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:18:in `create'
+  [1m[36mMatch Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "matches" WHERE "matches"."cockroach_id" = ? AND "matches"."id" != ? AND "matches"."user_id" = ? LIMIT ?[0m  [["cockroach_id", 46], ["id", 33], ["user_id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:20:in `create'
+Redirected to http://localhost:3000/matches/33
+Completed 302 Found in 12ms (ActiveRecord: 2.1ms | Allocations: 8370)
+
+
+Started GET "/matches/33" for ::1 at 2020-11-02 16:19:49 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:7:in `show'
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:7
+  Rendered matches/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1571)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.6ms | Allocations: 8017)
+
+
+Started GET "/cockroaches/" for ::1 at 2020-11-02 16:19:53 -0500
+Processing by CockroachesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  Rendering cockroaches/index.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches"[0m
+  ↳ app/views/cockroaches/index.html.erb:6
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/cockroaches/index.html.erb:7
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/cockroaches/index.html.erb:9
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/cockroaches/index.html.erb:9
+  Rendered cockroaches/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3798)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 11.9ms | ActiveRecord: 0.8ms | Allocations: 9733)
+
+
+Started GET "/users/17" for ::1 at 2020-11-02 16:19:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:31
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:31
+  Rendered users/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 3094)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 9545)
+
+
+Started GET "/matches/33" for ::1 at 2020-11-02 16:19:56 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:7:in `show'
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mCockroach Load (0.2ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:7
+  Rendered matches/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1571)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 17.7ms | ActiveRecord: 0.7ms | Allocations: 8012)
+
+
+Started DELETE "/matches/33" for ::1 at 2020-11-02 16:19:57 -0500
+Processing by MatchesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iIriHzTkRuBmvm02WUtFQOqqt4imD+GRgxXbMHOdLxCV3BBTlDFp1gDv7lIHkGgN/ww8Q2kLzDGahhXUGg5cUQ==", "id"=>"33"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:29:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:30:in `destroy'
+  [1m[36mMatch Destroy (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = ?[0m  [["id", 33]]
+  ↳ app/controllers/matches_controller.rb:30:in `destroy'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:30:in `destroy'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:31:in `destroy'
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 11ms (ActiveRecord: 2.6ms | Allocations: 4483)
+
+
+Started GET "/users/17" for ::1 at 2020-11-02 16:19:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `set_current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:24
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 17]]
+  ↳ app/views/users/show.html.erb:30
+  [1m[36mCockroach Load (0.1ms)[0m  [1m[34mSELECT "cockroaches".* FROM "cockroaches" WHERE "cockroaches"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:31
+  Rendered users/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2310)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 0.8ms | Allocations: 8756)
+
+
